@@ -130,11 +130,11 @@ Anda akan melihat halaman WordPress installation wizard.
 2. Pilih bahasa (Bahasa Indonesia)
 3. Isi form:
    - Site Title: "My WordPress Site"
-   - Username: "admin"
-   - Password: "password123"
-   - Email: "admin@example.com"
+   - Username: "aubindaffa"
+   - Password: "Suksesdi2030"
+   - Email: "aubindaffaa321@gmail.com"
 4. Klik "Install WordPress"
-5. Login dengan admin / password123
+5. Login dengan aubindaffa / Suksesdi2030
 
 ### Test 2: Create Post/Page (Verify Database Connection)
 1. Login ke WordPress dashboard
@@ -238,6 +238,15 @@ DBSIZE              # Lihat jumlah keys
 KEYS *              # Lihat semua keys
 GET wp_*            # Lihat cache values
 ```
+## Screenshot ##
+1. Screenshot WordPress installation page
+Mohon maaf kelupaan, sudah terlanjur bikin akun
+2. Screenshot WordPress dashboard
+![WordPress Dashboard](Screenshot/wp-dashboard.png)
+3. Screenshot docker ps menunjukkan 3 containers running
+![Docker PS Output](Screenshot/Container-docker.png)
+4. Screenshot Redis CLI ping test
+![Redis PING Respon](Screenshot/Redis-ping.png)
 
 ## ❓ Jawaban Pertanyaan
 
@@ -363,23 +372,3 @@ PSS/
 - [Docker Compose Documentation](https://docs.docker.com/compose/)
 - [Docker Networking](https://docs.docker.com/network/)
 
-## ✅ Checklist Submission
-
-- [ ] docker-compose.yml dibuat dan berfungsi
-- [ ] WordPress accessible di http://localhost:8000
-- [ ] MySQL working (post/page bisa dibuat)
-- [ ] Volumes working (data persist setelah restart)
-- [ ] Redis connected
-- [ ] Screenshots diambil:
-  - [ ] WordPress installation page
-  - [ ] WordPress dashboard
-  - [ ] `docker-compose ps` output
-  - [ ] Redis CLI ping test
-- [ ] README.md dengan dokumentasi lengkap
-- [ ] Repository di GitHub/GitLab
-- [ ] URL repository disubmit
-
----
-
-**Last Updated**: April 16, 2026  
-**Author**: Automation Setup
