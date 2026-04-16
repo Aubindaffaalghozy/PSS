@@ -42,12 +42,6 @@ logs/
 # wp-content/uploads/
 # wp-content/themes/custom-theme/
 
-# Screenshots (optional - if you want to store in repo)
-screenshots/
-*.png
-*.jpg
-*.jpeg
-
 # Dependencies
 node_modules/
 vendor/
