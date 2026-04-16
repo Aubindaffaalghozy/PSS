@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress_app
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_NAME: wordpress_db
+      WORDPRESS_DB_USER: wordpress_user
+      WORDPRESS_DB_PASSWORD: wordpress_password
+      WORDPRESS_TABLE_PREFIX: "wp_"
+    depends_on:
+      - mysql
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - wordpress_network
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: wordpress_user
+      MYSQL_PASSWORD: wordpress_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - wordpress_network
+    restart: unless-stopped
+
+  redis:
+    image: redis:alpine
+    container_name: redis_cache
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - wordpress_network
+    restart: unless-stopped
+
+volumes:
+  wordpress_data:
+    driver: local
+  mysql_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  wordpress_network:
+    driver: bridge

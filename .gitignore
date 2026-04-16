@@ -1,0 +1,62 @@
+# .gitignore - Files to exclude from Git repository
+
+# Environment variables (sensitive data)
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# Docker files (optional to exclude)
+# Uncomment if you don't want to track container artifacts
+# .docker/
+# compose.override.yml
+
+# Backup files
+*.bak
+*.backup
+backup/
+backups/
+*.sql
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.log
+logs/
+
+# WordPress files (if storing locally)
+# wp-content/uploads/
+# wp-content/themes/custom-theme/
+
+# Screenshots (optional - if you want to store in repo)
+screenshots/
+*.png
+*.jpg
+*.jpeg
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build artifacts
+build/
+dist/
+out/
+
+# Keep docker-compose.yml (it's safe to share in repo)
+# Keep README.md and documentation
+# Keep setup-redis.sh and verify.sh scripts
