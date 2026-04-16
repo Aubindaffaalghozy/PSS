@@ -242,11 +242,11 @@ GET wp_*            # Lihat cache values
 1. Screenshot WordPress installation page
 Mohon maaf kelupaan, sudah terlanjur bikin akun
 2. Screenshot WordPress dashboard
-![WordPress Dashboard](Screenshot/wp-dashboard.png)
+![WordPress Dashboard](screenshots/wp-dashboard.png)
 3. Screenshot docker ps menunjukkan 3 containers running
-![Docker PS Output](Screenshot/Container-docker.png)
+![Docker PS Output](screenshots/Container-docker.png)
 4. Screenshot Redis CLI ping test
-![Redis PING Respon](Screenshot/Redis-ping.png)
+![Redis PING Respon](screenshots/Redis-ping.png)
 
 ## ❓ Jawaban Pertanyaan
 
